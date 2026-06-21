@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#15140f"/>
+  <g fill="none" stroke="#9a7b4f" stroke-width="1.2" opacity="0.6">
+    <path d="M120 250 L210 178 L300 250"/><path d="M140 250 V330 H280 V250"/>
+  </g>
+  <text x="120" y="150" font-family="Jost,Arial,sans-serif" font-size="22" letter-spacing="8" fill="#b8b09c">ROOF REPAIR KEMPEN</text>
+  <text x="118" y="420" font-family="Cormorant Garamond,Georgia,serif" font-size="118" fill="#f3f0ea">Daken gebouwd</text>
+  <text x="118" y="530" font-family="Cormorant Garamond,Georgia,serif" font-size="118" fill="#f3f0ea">met <tspan font-style="italic" fill="#d8c19c">precisie.</tspan></text>
+  <text x="122" y="585" font-family="Jost,Arial,sans-serif" font-size="24" letter-spacing="4" fill="#8b8678">Dakwerken · Renovatie · Daklekkage · de Kempen</text>
+</svg>
