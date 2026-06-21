@@ -143,6 +143,31 @@
   footer ul a:hover{color:var(--cream)}
   .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:26px;font-size:.74rem;letter-spacing:.06em;color:#8a8472}
 
+  /* feature image band */
+  .feature{position:relative;height:78vh;min-height:460px;overflow:hidden}
+  .feature img{width:100%;height:100%;object-fit:cover}
+  .feature::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,18,12,.55),transparent 45%)}
+  .feature .cap{position:absolute;left:40px;bottom:30px;z-index:2;color:#f3f0ea}
+  .feature .cap .label{color:#e7dfce}
+  .feature .cap .t{font-family:var(--serif);font-size:1.8rem;margin-top:6px}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:248px;gap:18px}
+  .gtile{position:relative;overflow:hidden;background:var(--bg-2);grid-column:span 2}
+  .gtile.tall{grid-column:span 2;grid-row:span 2}
+  .gtile img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+  .gtile:hover img{transform:scale(1.06)}
+  .gtile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,18,12,.66),rgba(0,0,0,0) 58%);z-index:1}
+  .gtile .gcap{position:absolute;left:24px;right:24px;bottom:20px;z-index:2}
+  .gtile .gcap .label{color:#e7dfce}
+  .gtile .gcap h3{color:#fff;font-size:1.5rem;margin-top:4px}
+
+  /* dark section with background photo */
+  .dark-img{position:relative;color:var(--cream);overflow:hidden}
+  .dark-img .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .dark-img::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(13,12,9,.80),rgba(13,12,9,.86));z-index:1}
+  .dark-img .wrap{position:relative;z-index:2}
+
   .reveal{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
 
@@ -155,6 +180,8 @@
     .hero-line{display:none}
     .xrow{grid-template-columns:50px 1fr;gap:14px}
     .xrow .d,.xrow .ar{display:none}
+    .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
+    .gtile,.gtile.tall{grid-column:auto;grid-row:auto}
   }
   @media(max-width:680px){
     .nav-links,.nav-right .tel{display:none}
@@ -162,6 +189,8 @@
     .nav-links.open{display:flex;position:fixed;inset:74px 0 auto 0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 0}
     .nav-links.open li{text-align:center}.nav-links.open a{display:block;padding:16px}
     .steps,.stats{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr;grid-auto-rows:240px}
+    .feature{height:60vh}
     .sec{padding:100px 0}
   }
 </style>
@@ -174,6 +203,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#expertise" class="ul">Expertise</a></li>
       <li><a href="#werkwijze" class="ul">Werkwijze</a></li>
+      <li><a href="#realisaties" class="ul">In beeld</a></li>
       <li><a href="#filosofie" class="ul">Filosofie</a></li>
       <li><a href="#werkgebied" class="ul">Werkgebied</a></li>
       <li><a href="#contact" class="ul">Contact</a></li>
@@ -209,6 +239,15 @@
   </div>
   <span class="scrollcue">Scroll</span>
 </header>
+
+<!-- FEATURE IMAGE -->
+<section class="feature reveal">
+  <img src="assets/img/woning.jpg" alt="Woning met vakkundig gelegd pannendak" loading="lazy" />
+  <div class="cap">
+    <span class="label">Realisatie — de Kempen</span>
+    <div class="t">Vakkundig gelegde daken, gemaakt om te blijven.</div>
+  </div>
+</section>
 
 <!-- FILOSOFIE / MANIFESTO -->
 <section class="sec manifesto" id="filosofie">
@@ -262,8 +301,26 @@
   </div>
 </section>
 
+<!-- REALISATIES -->
+<section class="sec" id="realisaties">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">04 — In beeld</span>
+      <h2 style="font-size:clamp(2rem,4.5vw,3.4rem);margin-top:18px">Dakwerken<br/>in beeld.</h2>
+    </div>
+    <div class="gallery">
+      <div class="gtile tall reveal"><img src="assets/img/vakmanschap.jpg" alt="Dakdekkers aan het werk op een dak" loading="lazy" /><div class="gcap"><span class="label">Vakmanschap</span><h3>Daken in uitvoering</h3></div></div>
+      <div class="gtile reveal"><img src="assets/img/nieuw-dak.jpg" alt="Nieuw dak in opbouw met dakpannen" loading="lazy" /><div class="gcap"><span class="label">Nieuwbouw</span><h3>Nieuw dak in opbouw</h3></div></div>
+      <div class="gtile reveal"><img src="assets/img/feature.jpg" alt="Dakpannen tegen een heldere hemel" loading="lazy" /><div class="gcap"><span class="label">Detail</span><h3>Pannen tegen de hemel</h3></div></div>
+      <div class="gtile reveal"><img src="assets/img/dakdetail.jpg" alt="Dakraam en pannen, dakdetail" loading="lazy" /><div class="gcap"><span class="label">Dakdetail</span><h3>Dakraam &amp; pannen</h3></div></div>
+      <div class="gtile reveal"><img src="assets/img/architectuur.jpg" alt="Lijnenspel van daken tegen de lucht" loading="lazy" /><div class="gcap"><span class="label">Architectuur</span><h3>Lijnenspel in daken</h3></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- DARK QUOTE + STATS -->
-<section class="sec dark">
+<section class="sec dark dark-img">
+  <img class="bgimg" src="assets/img/herstel.jpg" alt="" aria-hidden="true" loading="lazy" />
   <div class="wrap">
     <span class="label reveal">Vakmanschap</span>
     <p class="quote serif reveal">Twintig jaar precisie, zichtbaar in <em>elk detail</em> van het dak.</p>
@@ -280,7 +337,7 @@
 <section class="sec" id="werkgebied">
   <div class="wrap coltitle">
     <div class="reveal">
-      <span class="label">04 — Werkgebied</span>
+      <span class="label">05 — Werkgebied</span>
       <h2 style="font-size:clamp(2rem,4.5vw,3.2rem);margin-top:18px">Actief in de hele<br/>Kempen &amp; grensstreek.</h2>
     </div>
     <div class="regions reveal">
@@ -294,7 +351,7 @@
 <!-- CONTACT -->
 <section class="sec dark" id="contact">
   <div class="wrap">
-    <span class="label reveal">05 — Contact</span>
+    <span class="label reveal">06 — Contact</span>
     <div class="contact-grid" style="margin-top:30px">
       <div class="reveal">
         <h2 style="color:var(--cream)">Laten we uw<br/>dak <em style="font-style:italic;color:#d8c19c">bespreken</em>.</h2>
@@ -353,7 +410,8 @@
     </div>
     <div class="foot-bot">
       <span>© 2026 Roof Repair Kempen</span>
-      <span>Dakwerken · Renovatie · Daklekkage · Isolatie — de Kempen</span>
+      <span>Afbeeldingen ter illustratie · Pexels</span>
+      <span>Dakwerken · Renovatie · Daklekkage — de Kempen</span>
     </div>
   </div>
 </footer>
