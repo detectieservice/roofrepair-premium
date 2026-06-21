@@ -168,6 +168,19 @@
   .dark-img::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(13,12,9,.80),rgba(13,12,9,.86));z-index:1}
   .dark-img .wrap{position:relative;z-index:2}
 
+  /* scroll-drawn scene illustrations */
+  .scene-art{width:100%;margin:30px 0 6px;overflow:visible;pointer-events:none}
+  .scene-art svg{width:100%;height:auto;display:block;overflow:visible;will-change:transform;transform-origin:50% 50%}
+  .scene-art .draw{fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+  .scene-art .ink{stroke:var(--ink)}
+  .scene-art .acc{stroke:var(--accent)}
+  .scene-art .crm{stroke:#f3f0ea}
+  .scene-art .brz{stroke:#d8c19c}
+  .scene-art .thin{stroke-width:1.1;opacity:.7}
+  .hero-scene{margin-top:40px;max-width:780px}
+  @media(max-width:760px){.scene-art{margin-top:18px}}
+  @media(prefers-reduced-motion:reduce){.scene-art svg{transform:none!important}}
+
   .reveal{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
 
@@ -236,6 +249,20 @@
         <a href="#expertise" class="btn" style="border-color:var(--line-2)">Onze expertise</a>
       </div>
     </div>
+    <div class="scene-art hero-scene" data-scene>
+      <svg viewBox="0 0 760 200" aria-label="Met precisie gebouwd dak">
+        <line class="draw ink thin" x1="40" y1="158" x2="720" y2="158"/>
+        <line class="draw acc" x1="150" y1="158" x2="380" y2="46"/>
+        <line class="draw acc" x1="380" y1="46" x2="610" y2="158"/>
+        <line class="draw ink thin" x1="380" y1="46" x2="380" y2="158"/>
+        <path class="draw acc" d="M338 80 A 56 56 0 0 1 422 80"/>
+        <line class="draw acc thin" x1="150" y1="180" x2="610" y2="180"/>
+        <line class="draw acc thin" x1="150" y1="172" x2="150" y2="188"/>
+        <line class="draw acc thin" x1="610" y1="172" x2="610" y2="188"/>
+        <line class="draw ink thin" x1="245" y1="112" x2="262" y2="104"/>
+        <line class="draw ink thin" x1="290" y1="90" x2="307" y2="82"/>
+      </svg>
+    </div>
   </div>
   <span class="scrollcue">Scroll</span>
 </header>
@@ -261,6 +288,20 @@
       <p>Twintig jaar ervaring in de Kempen, vertaald in zuiver vakmanschap, duurzame materialen en een afwerking tot in het kleinste detail. Discreet, stipt en betrouwbaar.</p>
       <p style="margin-top:1.6rem"><a href="#contact" class="ul" style="color:var(--accent);letter-spacing:.04em">Plan een vrijblijvend gesprek →</a></p>
     </div>
+    <div class="scene-art" data-scene style="grid-column:1/-1">
+      <svg viewBox="0 0 1000 200" aria-label="Het dak als bekroning van de woning">
+        <line class="draw ink thin" x1="380" y1="172" x2="620" y2="172"/>
+        <line class="draw ink" x1="410" y1="172" x2="410" y2="120"/>
+        <line class="draw ink" x1="590" y1="172" x2="590" y2="120"/>
+        <line class="draw acc" x1="392" y1="120" x2="500" y2="72"/>
+        <line class="draw acc" x1="500" y1="72" x2="608" y2="120"/>
+        <line class="draw ink thin" x1="468" y1="64" x2="532" y2="64"/>
+        <path class="draw acc" d="M468 64 L478 42 L490 58 L500 36 L510 58 L522 42 L532 64"/>
+        <circle class="draw acc" cx="478" cy="42" r="3.5"/>
+        <circle class="draw acc" cx="500" cy="36" r="3.5"/>
+        <circle class="draw acc" cx="522" cy="42" r="3.5"/>
+      </svg>
+    </div>
   </div>
 </section>
 
@@ -270,6 +311,18 @@
     <div class="sec-head reveal">
       <span class="label">02 — Expertise</span>
       <h2 style="font-size:clamp(2rem,4.5vw,3.4rem);margin-top:18px">Een volledig repertoire<br/>aan dakwerken.</h2>
+      <div class="scene-art" data-scene>
+        <svg viewBox="0 0 1000 190" aria-label="Opbouw van een dak in lagen">
+          <line class="draw ink" x1="120" y1="170" x2="820" y2="58"/>
+          <line class="draw ink thin" x1="120" y1="186" x2="820" y2="74"/>
+          <line class="draw acc thin" x1="150" y1="162" x2="845" y2="50"/>
+          <line class="draw ink thin" x1="300" y1="138" x2="312" y2="120"/>
+          <line class="draw ink thin" x1="430" y1="117" x2="442" y2="99"/>
+          <line class="draw ink thin" x1="560" y1="96" x2="572" y2="78"/>
+          <path class="draw acc" d="M165 150 q14 -12 28 0 q14 -12 28 0 q14 -12 28 0 q14 -12 28 0 q14 -12 28 0"/>
+          <path class="draw acc" d="M120 172 a14 14 0 1 0 -2 -1"/>
+        </svg>
+      </div>
     </div>
     <div class="xindex">
       <div class="xrow reveal"><span class="n">01</span><h3>Nieuw dak &amp; dakbedekking</h3><span class="d">Nieuwbouw of integrale vervanging, volgens de actuele normen.</span><span class="ar">→</span></div>
@@ -291,6 +344,18 @@
     <div class="sec-head reveal">
       <span class="label">03 — Werkwijze</span>
       <h2 style="font-size:clamp(2rem,4.5vw,3.4rem);margin-top:18px">Van eerste gesprek<br/>tot blijvende nazorg.</h2>
+      <div class="scene-art" data-scene>
+        <svg viewBox="0 0 1000 150" aria-label="Werkwijze in vier stappen">
+          <circle class="draw acc" cx="120" cy="75" r="26"/>
+          <line class="draw ink thin" x1="148" y1="75" x2="372" y2="75"/>
+          <circle class="draw acc" cx="400" cy="75" r="26"/>
+          <line class="draw ink thin" x1="428" y1="75" x2="652" y2="75"/>
+          <circle class="draw acc" cx="680" cy="75" r="26"/>
+          <line class="draw ink thin" x1="708" y1="75" x2="852" y2="75"/>
+          <circle class="draw acc" cx="880" cy="75" r="26"/>
+          <path class="draw acc" d="M869 75 l8 9 16 -19"/>
+        </svg>
+      </div>
     </div>
     <div class="steps">
       <div class="step reveal"><div class="r">I</div><hr/><h3>Kennismaking</h3><p>We luisteren naar uw wensen en plannen een afspraak op maat.</p></div>
@@ -345,6 +410,18 @@
       <span>Hoogstraten</span><span>Ravels</span><span>Retie</span><span>Kasterlee</span><span>Oud-Turnhout</span>
       <span>Dessel</span><span>Reusel</span><span>Bladel</span><span>Eindhoven</span>
     </div>
+    <div class="scene-art" data-scene style="grid-column:1/-1">
+      <svg viewBox="0 0 1000 210" aria-label="Werkgebied in de Kempen met locaties">
+        <path class="draw ink thin" d="M250 150 C300 70 430 60 520 90 C610 120 700 80 760 110 C820 140 780 175 690 178 C560 182 400 190 320 178 C260 170 235 165 250 150 Z"/>
+        <path class="draw acc thin" d="M360 150 C440 110 520 130 600 112 C660 100 690 120 700 128"/>
+        <path class="draw acc" d="M360 150 c-13 0 -24 11 -24 24 c0 18 24 34 24 34 c0 0 24 -16 24 -34 c0 -13 -11 -24 -24 -24 z"/>
+        <path class="draw acc" d="M560 120 c-13 0 -24 11 -24 24 c0 18 24 34 24 34 c0 0 24 -16 24 -34 c0 -13 -11 -24 -24 -24 z"/>
+        <path class="draw acc" d="M700 128 c-13 0 -24 11 -24 24 c0 18 24 34 24 34 c0 0 24 -16 24 -34 c0 -13 -11 -24 -24 -24 z"/>
+        <circle class="draw ink thin" cx="360" cy="174" r="5"/>
+        <circle class="draw ink thin" cx="560" cy="144" r="5"/>
+        <circle class="draw ink thin" cx="700" cy="152" r="5"/>
+      </svg>
+    </div>
   </div>
 </section>
 
@@ -352,6 +429,19 @@
 <section class="sec dark" id="contact">
   <div class="wrap">
     <span class="label reveal">06 — Contact</span>
+    <div class="scene-art" data-scene style="max-width:620px;margin-top:22px">
+      <svg viewBox="0 0 1000 200" aria-label="Laten we uw dak bespreken">
+        <line class="draw brz thin" x1="90" y1="150" x2="300" y2="150"/>
+        <line class="draw crm" x1="120" y1="150" x2="120" y2="108"/>
+        <line class="draw crm" x1="270" y1="150" x2="270" y2="108"/>
+        <line class="draw brz" x1="104" y1="108" x2="195" y2="64"/>
+        <line class="draw brz" x1="195" y1="64" x2="286" y2="108"/>
+        <path class="draw crm" d="M380 60 H780 a26 26 0 0 1 26 26 V134 a26 26 0 0 1 -26 26 H470 l-30 30 v-30 H380 a26 26 0 0 1 -26 -26 V86 a26 26 0 0 1 26 -26 Z"/>
+        <circle class="draw brz" cx="470" cy="110" r="6"/>
+        <circle class="draw brz" cx="540" cy="110" r="6"/>
+        <circle class="draw brz" cx="610" cy="110" r="6"/>
+      </svg>
+    </div>
     <div class="contact-grid" style="margin-top:30px">
       <div class="reveal">
         <h2 style="color:var(--cream)">Laten we uw<br/>dak <em style="font-style:italic;color:#d8c19c">bespreken</em>.</h2>
@@ -430,6 +520,55 @@
     const body=`Naam: ${g('naam')}%0D%0ATelefoon: ${g('tel')}%0D%0AE-mail: ${g('email')}%0D%0A%0D%0AProject:%0D%0A${g('bericht')}`;
     window.location.href=`mailto:info@roofrepairkempen.be?subject=${encodeURIComponent('Offerteaanvraag — dakwerken')}&body=${body}`;
   });
+
+  /* ---- scroll-driven SVG scene engine ---- */
+  (function(){
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const scenes = Array.prototype.slice.call(document.querySelectorAll('[data-scene]')).map(el=>{
+      const items = Array.prototype.slice.call(el.querySelectorAll('.draw')).map(d=>{
+        let len = 100;
+        try { len = d.getTotalLength() || 100; } catch(e){}
+        d.style.strokeDasharray = len;
+        d.style.strokeDashoffset = reduce ? 0 : len;   // reduced-motion: show drawn
+        return { d, len };
+      });
+      return { el, svg: el.querySelector('svg'), items };
+    });
+    if(reduce || !scenes.length) return;
+
+    const ease = t => t<0.5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2;
+    let lastY = window.scrollY, vel = 0;
+
+    function frame(){
+      const y = window.scrollY;
+      vel += ((y - lastY) - vel) * 0.18;  // smoothed scroll velocity
+      vel *= 0.90;                          // settle toward 0 when idle
+      lastY = y;
+      const vh = window.innerHeight, start = vh*0.92, end = vh*0.30;
+      const stretch = 1 + Math.max(-0.05, Math.min(0.05, vel*0.0035)); // speed
+      for(const s of scenes){
+        const r = s.el.getBoundingClientRect();
+        let p = (start - r.top) / (start - end);
+        p = p<0?0:p>1?1:p;                  // direction handled: p falls when scrolling up
+        const n = s.items.length || 1;
+        for(let i=0;i<s.items.length;i++){
+          const o = s.items[i];
+          let lp = (p - i/n) * n;           // chronology: each path has its own window
+          lp = lp<0?0:lp>1?1:lp;
+          o.d.style.strokeDashoffset = o.len * (1 - ease(lp));
+        }
+        if(s.svg){
+          const par = (p - 0.5) * 22;       // parallax in scroll direction
+          s.svg.style.transform = 'translateY(' + (-par) + 'px) scaleY(' + stretch + ')';
+        }
+      }
+      requestAnimationFrame(frame);
+    }
+    window.addEventListener('resize', ()=>{
+      scenes.forEach(s=>s.items.forEach(o=>{ try{ o.len=o.d.getTotalLength(); o.d.style.strokeDasharray=o.len; }catch(e){} }));
+    }, {passive:true});
+    requestAnimationFrame(frame);
+  })();
 </script>
 </body>
 </html>
